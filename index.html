@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bugpoint || QA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="./bugpoint_logo.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f9fa;
+      color: #212529;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 30px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .logo {
+      height: 180px; /* Значительно увеличен размер логотипа */
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: 40px auto;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .intro p {
+      font-size: 18px;
+      color: #495057;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 40px 0;
+    }
+
+    .feature {
+      background: #fff;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px;
+      max-width: 250px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .feature:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .cta a {
+      text-decoration: none;
+      background-color: #212529;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: #343a40;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #adb5bd;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="bugpoint_logo.png" alt="bugpoint logo" class="logo" />
+    <h1>bugpoint || QA</h1>
+  </header>
+
+  <section class="intro">
+    <p>Авторский Telegram-канал для тестировщиков: от практики до философии качества. Обсуждаем баги, автоматизацию, карьеры и реальные кейсы из жизни QA-инженера. Коротко, по делу и с юмором 🐞</p>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h3>💡 Ежедневные посты</h3>
+      <p>Ситуации, ошибки, наблюдения, подходы — всё на практике.</p>
+    </div>
+    <div class="feature">
+      <h3>🧪 Автоматизация</h3>
+      <p>JS, Jest, API-тесты — разбор задач и трюков.</p>
+    </div>
+    <div class="feature">
+      <h3>👨‍💻 Путь QA</h3>
+      <p>Карьерные шаги, собеседования, развитие в профессии.</p>
+    </div>
+  </section>
+
+  <div class="cta">
+    <a href="https://t.me/bugpointqa" target="_blank">Перейти в Telegram</a>
+  </div>
+
+  <footer>
+    © 2025 bugpoint. Все права защищены.
+  </footer>
+</body>
+</html>
