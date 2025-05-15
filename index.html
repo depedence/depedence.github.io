@@ -98,6 +98,99 @@
       color: #adb5bd;
       padding: 20px;
     }
+    /* Добавляем новые стили для раздела примеров */
+    .content-examples {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .content-examples h2 {
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .content-examples p.subtitle {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #495057;
+    }
+
+    .post-examples {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .post-example {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      position: relative; /* Для абсолютного позиционирования псевдоэлемента */
+    }
+
+    .post-example:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Делаем всю карточку кликабельной */
+    .post-example::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    .post-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 1px solid #eee;
+    }
+
+    .post-content {
+      padding: 15px;
+      position: relative;
+      z-index: 2; /* Поднимаем контент выше псевдоэлемента */
+      pointer-events: none; /* Чтобы клик проходил сквозь контент к псевдоэлементу */
+    }
+
+    .post-title {
+      font-weight: 600;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .post-text {
+      font-size: 14px;
+      color: #495057;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .post-date {
+      font-size: 13px;
+      color: #868e96;
+    }
+
+    .see-more {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .see-more a {
+      color: #4a6bff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
   </style>
 </head>
 <body>
@@ -129,8 +222,41 @@
     <a href="https://t.me/bugpointqa" target="_blank">Перейти в Telegram</a>
   </div>
 
+  <section class="content-examples">
+    <h2>Примеры публикаций</h2>
+    <p class="subtitle">Реальные посты из авторского Telegram-канала</p>
+
+    <div class="post-examples">
+      <div class="post-example">
+        <img src="post1.jpg" alt="Пример поста: Почему важно искать и устранять баги вовремя" class="post-image">
+        <div class="post-content">
+          <div class="post-title">Почему важно искать и устранять баги вовремя</div>
+          <div class="post-text">
+            Кажется очевидным: баги надо фиксить. Но на практике это не всегда происходит вовремя. А жаль.
+          </div>
+          <div class="post-date">15 мая 2025</div>
+        </div>
+      </div>
+
+      <div class="post-example">
+        <img src="post2.jpg" alt="Пример поста: Гарнизация в тестировании" class="post-image">
+        <div class="post-content">
+          <div class="post-title">Еженедельная рубрика "Баг недели"</div>
+          <div class="post-text">
+            Один баг тихо ломал аналитику несколько месяцев. И никто не замечал.
+          </div>
+          <div class="post-date">12 мая 2025</div>
+        </div>
+      </div>
+
+    <div class="see-more">
+      <a href="https://t.me/bugpointqa" target="_blank">Смотреть больше примеров в канале →</a>
+    </div>
+  </section>
+
   <footer>
     © 2025 bugpoint. Все права защищены.
   </footer>
+
 </body>
 </html>
