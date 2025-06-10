@@ -2,148 +2,178 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Регистрация — BugPoint</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Регистрация — bugpoint</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="./bugpoint_logo.png">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #0e1013;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      padding: 20px;
+      background-color: #f8f9fa;
+      color: #212529;
+      line-height: 1.6;
     }
 
-    .container {
-      background-color: #1b1d23;
-      padding: 40px;
-      border-radius: 16px;
-      box-shadow: 0 0 24px rgba(0, 0, 0, 0.3);
-      width: 100%;
-      max-width: 420px;
+    header {
+      background-color: #ffffff;
+      padding: 30px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      text-align: center;
     }
 
     .logo {
-      display: block;
-      margin: 0 auto 24px auto;
-      height: 40px;
+      height: 140px;
+      margin-bottom: 15px;
     }
 
     h1 {
-      text-align: center;
-      margin-bottom: 24px;
+      font-size: 28px;
       font-weight: 600;
     }
 
-    label {
+    .register-section {
+      max-width: 400px;
+      margin: 60px auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+    }
+
+    .register-section h2 {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+
+    form label {
       display: block;
       margin-bottom: 6px;
-      font-size: 14px;
+      font-weight: 500;
     }
 
-    input[type="text"],
-    input[type="email"],
-    input[type="password"] {
+    form input {
       width: 100%;
       padding: 12px;
-      border: none;
-      border-radius: 8px;
-      background-color: #2c2f36;
-      color: #ffffff;
-      margin-bottom: 16px;
+      border: 1px solid #ced4da;
+      border-radius: 6px;
+      margin-bottom: 20px;
       font-size: 14px;
     }
 
-    button {
+    .submit-btn {
       width: 100%;
-      padding: 14px;
-      background-color: #ff2768;
-      border: none;
-      border-radius: 8px;
+      background-color: #212529;
       color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
       font-weight: 600;
       cursor: pointer;
       transition: background 0.3s ease;
     }
 
-    button:hover {
-      background-color: #e31b5e;
+    .submit-btn:hover {
+      background-color: #343a40;
     }
 
-    .message {
-      margin-top: 16px;
+    .login-link {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .login-link a {
+      color: #4a6bff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer {
       text-align: center;
       font-size: 14px;
+      color: #adb5bd;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="/assets/bugpoint-logo-light.svg" alt="BugPoint logo" class="logo" />
-    <h1>Регистрация</h1>
-    <form id="registerForm">
-      <label for="name">Имя</label>
-      <input type="text" id="name" name="name" required />
 
+  <header>
+    <img src="bugpoint_logo.png" alt="bugpoint logo" class="logo" />
+    <h1>bugpoint || QA</h1>
+  </header>
+
+  <section class="register-section">
+    <h2>Регистрация</h2>
+    <form>
       <label for="email">Email</label>
       <input type="email" id="email" name="email" required />
 
       <label for="password">Пароль</label>
       <input type="password" id="password" name="password" required />
 
-      <button type="submit">Зарегистрироваться</button>
+      <button type="submit" class="submit-btn">Создать аккаунт</button>
     </form>
-    <div class="message" id="message"></div>
-  </div>
+    <div class="login-link">
+      Уже есть аккаунт? <a href="/login">Войти</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 bugpoint. Все права защищены.
+  </footer>
 
   <script>
-    const form = document.getElementById("registerForm");
-    const message = document.getElementById("message");
+    const form = document.querySelector('form');
 
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
 
-      const data = {
-        name: form.name.value,
-        email: form.email.value,
-        password: form.password.value
-      };
+      const email = form.email.value.trim();
+      const password = form.password.value;
+
+      if (!email || !password) {
+        alert('Пожалуйста, заполните все поля');
+        return;
+      }
 
       try {
-        const response = await fetch("http://localhost:5000/api/auth/register", {
-          method: "POST",
+        const response = await fetch('http://localhost:5000/api/register', {
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json"
+            'Content-Type': 'application/json'
           },
-          body: JSON.stringify(data)
+          body: JSON.stringify({ email, password })
         });
 
-        const result = await response.json();
+        const contentType = response.headers.get('content-type');
 
         if (response.ok) {
-          message.textContent = "Регистрация успешна!";
-          message.style.color = "#00c97b";
-          form.reset();
+          if (contentType && contentType.includes('application/json')) {
+            const data = await response.json();
+            alert('Регистрация успешна!');
+            window.location.href = '/login';
+          } else {
+            const text = await response.text();
+            console.warn('Ожидался JSON, но получен:', text);
+            alert('Успешно, но сервер вернул не JSON');
+          }
         } else {
-          message.textContent = result.message || "Ошибка регистрации";
-          message.style.color = "#ff6b6b";
+          const errorText = await response.text();
+          console.warn('Ошибка от сервера:', errorText);
+          alert('Ошибка регистрации: ' + errorText);
         }
-      } catch (err) {
-        message.textContent = "Ошибка подключения к серверу";
-        message.style.color = "#ff6b6b";
+
+      } catch (error) {
+        alert('Ошибка при отправке запроса: ' + error.message);
       }
     });
   </script>
+
 </body>
 </html>
