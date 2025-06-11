@@ -38,4 +38,8 @@ form.addEventListener('submit', async (event) => {
   } catch (error) {
     alert('Ошибка при отправке запроса: ' + error.message);
   }
+
+  localStorage.setItem('userEmail', email);
+  window.location.href = "index.html";
+
 });

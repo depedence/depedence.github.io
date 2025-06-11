@@ -1,23 +1,32 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
   font-family: 'Inter', sans-serif;
   background-color: #f8f9fa;
   color: #212529;
   line-height: 1.6;
 }
+
 .top-bar {
   background: linear-gradient(90deg, #ffffff, #f1f3f5);
   border-bottom: 1px solid #dee2e6;
-  color: #212529;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding: 15px 0;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   position: sticky;
   top: 0;
   z-index: 999;
 }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .top-bar-left a {
   color: #212529;
   text-decoration: none;
@@ -27,6 +36,7 @@ body {
   font-size: 16px;
   position: relative;
 }
+
 .top-bar-left a::after {
   content: "";
   position: absolute;
@@ -37,9 +47,11 @@ body {
   background-color: #000;
   transition: width 0.3s ease;
 }
+
 .top-bar-left a:hover::after {
   width: 100%;
 }
+
 .top-bar-right a {
   text-decoration: none;
   font-weight: 600;
@@ -49,51 +61,62 @@ body {
   font-size: 15px;
   margin-left: 15px;
 }
+
 .top-bar-right a.register-btn {
   background-color: #000;
   color: #fff;
 }
+
 .top-bar-right a.register-btn:hover {
   background-color: #333;
 }
+
 .top-bar-right a.login-btn {
   border: 1px solid #000;
   color: #000;
   background-color: transparent;
 }
+
 .top-bar-right a.login-btn:hover {
   background-color: #f1f1f1;
 }
+
 header {
   background-color: #ffffff;
   padding: 30px 0;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   text-align: center;
 }
+
 .logo {
   height: 180px;
   margin-bottom: 15px;
 }
+
 h1 {
   font-size: 32px;
   font-weight: 600;
 }
+
 .intro {
   max-width: 700px;
   margin: 40px auto;
   text-align: center;
   padding: 0 20px;
 }
+
 .intro p {
   font-size: 18px;
   color: #495057;
 }
+
 .features {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin: 40px 0;
 }
+
 .feature {
   background: #fff;
   border: 1px solid #dee2e6;
@@ -105,18 +128,22 @@ h1 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
+
 .feature:hover {
   transform: translateY(-8px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
+
 .feature h3 {
   font-size: 18px;
   margin-bottom: 10px;
 }
+
 .cta {
   text-align: center;
   margin: 40px 0;
 }
+
 .cta a {
   text-decoration: none;
   background-color: #212529;
@@ -126,9 +153,11 @@ h1 {
   font-weight: 600;
   transition: background 0.3s ease;
 }
+
 .cta a:hover {
   background-color: #343a40;
 }
+
 .guide-section {
   background-color: #f9f9f9;
   padding: 40px;
@@ -136,15 +165,18 @@ h1 {
   border-radius: 10px;
   margin: 30px 0;
 }
+
 .guide-section h2 {
   font-size: 24px;
   margin-bottom: 10px;
 }
+
 .guide-section p {
   font-size: 16px;
   color: #555;
   margin-bottom: 20px;
 }
+
 .download-btn {
   background-color: #333;
   color: #fff;
@@ -154,13 +186,29 @@ h1 {
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
+
 .download-btn:hover {
   background-color: #555;
 }
+
 footer {
   text-align: center;
   font-size: 14px;
   color: #adb5bd;
   padding: 20px;
   margin-top: 40px;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  .top-bar-left, .top-bar-right {
+    flex-basis: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .top-bar-right a {
+    display: inline-block;
+    margin: 5px;
+  }
 }
