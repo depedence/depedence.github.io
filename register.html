@@ -6,100 +6,7 @@
   <title>Регистрация — bugpoint</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="icon" href="./assets/img/bugpoint_logo.png">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: #f8f9fa;
-      color: #212529;
-      line-height: 1.6;
-    }
-
-    header {
-      background-color: #ffffff;
-      padding: 30px 0;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-      text-align: center;
-    }
-
-    .logo {
-      height: 140px;
-      margin-bottom: 15px;
-    }
-
-    h1 {
-      font-size: 28px;
-      font-weight: 600;
-    }
-
-    .register-section {
-      max-width: 400px;
-      margin: 60px auto;
-      background-color: #ffffff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
-    }
-
-    .register-section h2 {
-      text-align: center;
-      font-size: 22px;
-      font-weight: 600;
-      margin-bottom: 25px;
-    }
-
-    form label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 500;
-    }
-
-    form input {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ced4da;
-      border-radius: 6px;
-      margin-bottom: 20px;
-      font-size: 14px;
-    }
-
-    .submit-btn {
-      width: 100%;
-      background-color: #212529;
-      color: white;
-      padding: 14px;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .submit-btn:hover {
-      background-color: #343a40;
-    }
-
-    .login-link {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 14px;
-    }
-
-    .login-link a {
-      color: #4a6bff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 14px;
-      color: #adb5bd;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+  <link rel="stylesheet" href="./css/register.css">
 </head>
 <body>
 
@@ -108,7 +15,7 @@
     <h1>bugpoint || QA</h1>
   </header>
 
-  <section class="register-section">
+  <section>
     <h2>Регистрация</h2>
     <form>
       <label for="email">Email</label>
@@ -119,8 +26,8 @@
 
       <button type="submit" class="submit-btn">Создать аккаунт</button>
     </form>
-    <div class="login-link">
-      Уже есть аккаунт? <a href="/login">Войти</a>
+    <div class="link">
+      Уже есть аккаунт? <a href="/login.html">Войти</a>
     </div>
   </section>
 
@@ -128,52 +35,7 @@
     © 2025 bugpoint. Все права защищены.
   </footer>
 
-  <script>
-    const form = document.querySelector('form');
-
-    form.addEventListener('submit', async (event) => {
-      event.preventDefault();
-
-      const email = form.email.value.trim();
-      const password = form.password.value;
-
-      if (!email || !password) {
-        alert('Пожалуйста, заполните все поля');
-        return;
-      }
-
-      try {
-        const response = await fetch('http://localhost:5000/api/register', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ email, password })
-        });
-
-        const contentType = response.headers.get('content-type');
-
-        if (response.ok) {
-          if (contentType && contentType.includes('application/json')) {
-            const data = await response.json();
-            alert('Регистрация успешна!');
-            window.location.href = '/login';
-          } else {
-            const text = await response.text();
-            console.warn('Ожидался JSON, но получен:', text);
-            alert('Успешно, но сервер вернул не JSON');
-          }
-        } else {
-          const errorText = await response.text();
-          console.warn('Ошибка от сервера:', errorText);
-          alert('Ошибка регистрации: ' + errorText);
-        }
-
-      } catch (error) {
-        alert('Ошибка при отправке запроса: ' + error.message);
-      }
-    });
-  </script>
+  <script src="./js/register.js"></script>
 
 </body>
 </html>
