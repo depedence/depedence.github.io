@@ -16,14 +16,17 @@
     }
 
     .top-bar {
-      background-color: #ffffff;
+      background: linear-gradient(90deg, #ffffff, #f1f3f5);
       border-bottom: 1px solid #dee2e6;
       color: #212529;
       padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
 
     .top-bar-left a {
@@ -33,26 +36,51 @@
       margin-right: 25px;
       transition: color 0.3s ease;
       font-size: 16px;
+      position: relative;
     }
 
-    .top-bar-left a:hover {
-      color: #4a6bff;
+    .top-bar-left a::after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #000;
+      transition: width 0.3s ease;
+    }
+
+    .top-bar-left a:hover::after {
+      width: 100%;
     }
 
     .top-bar-right a {
-      color: #ffffff;
-      background-color: #212529;
       text-decoration: none;
       font-weight: 600;
-      margin-left: 15px;
       padding: 10px 20px;
       border-radius: 6px;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
       font-size: 15px;
+      margin-left: 15px;
     }
 
-    .top-bar-right a:hover {
-      background-color: #343a40;
+    .top-bar-right a.register-btn {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .top-bar-right a.register-btn:hover {
+      background-color: #333;
+    }
+
+    .top-bar-right a.login-btn {
+      border: 1px solid #000;
+      color: #000;
+      background-color: transparent;
+    }
+
+    .top-bar-right a.login-btn:hover {
+      background-color: #f1f1f1;
     }
 
     header {
@@ -176,15 +204,14 @@
 </head>
 <body>
 
-  <!-- Обновлённая верхняя панель -->
   <div class="top-bar">
     <div class="top-bar-left">
       <a href="#">О нас</a>
       <a href="#">Курсы</a>
     </div>
     <div class="top-bar-right">
-      <a href="register.html">Регистрация</a>
-      <a href="login.html">Войти</a>
+      <a href="register.html" class="register-btn">Регистрация</a>
+      <a href="login.html" class="login-btn">Войти</a>
     </div>
   </div>
 
