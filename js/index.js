@@ -26,3 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
 window.addEventListener("load", () => {
   document.getElementById("loader").style.display = "none";
 });
+
+// Проверка соединения с сервером
+// Показать модальное окно
+function showOfflineModal() {
+  const modal = document.querySelector('.offline-modal');
+  modal.classList.add('active');
+}
