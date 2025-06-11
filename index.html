@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>bugpoint || QA</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="icon" href="./bugpoint_logo.png">
@@ -15,6 +15,46 @@
       line-height: 1.6;
     }
 
+    .top-bar {
+      background-color: #ffffff;
+      border-bottom: 1px solid #dee2e6;
+      color: #212529;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .top-bar-left a {
+      color: #212529;
+      text-decoration: none;
+      font-weight: 600;
+      margin-right: 25px;
+      transition: color 0.3s ease;
+      font-size: 16px;
+    }
+
+    .top-bar-left a:hover {
+      color: #4a6bff;
+    }
+
+    .top-bar-right a {
+      color: #ffffff;
+      background-color: #212529;
+      text-decoration: none;
+      font-weight: 600;
+      margin-left: 15px;
+      padding: 10px 20px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+      font-size: 15px;
+    }
+
+    .top-bar-right a:hover {
+      background-color: #343a40;
+    }
+
     header {
       background-color: #ffffff;
       padding: 30px 0;
@@ -23,7 +63,7 @@
     }
 
     .logo {
-      height: 180px; /* Значительно увеличен размер логотипа */
+      height: 180px;
       margin-bottom: 15px;
     }
 
@@ -92,142 +132,62 @@
       background-color: #343a40;
     }
 
+    .guide-section {
+      background-color: #f9f9f9;
+      padding: 40px;
+      text-align: center;
+      border-radius: 10px;
+      margin: 30px 0;
+    }
+
+    .guide-section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .guide-section p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .download-btn {
+      background-color: #333;
+      color: #fff;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #555;
+    }
+
     footer {
       text-align: center;
       font-size: 14px;
       color: #adb5bd;
       padding: 20px;
+      margin-top: 40px;
     }
-    /* Добавляем новые стили для раздела примеров */
-    .content-examples {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .content-examples h2 {
-      text-align: center;
-      margin-bottom: 15px;
-      font-size: 28px;
-      font-weight: 600;
-    }
-
-    .content-examples p.subtitle {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #495057;
-    }
-
-    .post-examples {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-
-    .post-example {
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-      position: relative; /* Для абсолютного позиционирования псевдоэлемента */
-    }
-
-    .post-example:hover {
-      transform: translateY(-5px);
-    }
-
-    /* Делаем всю карточку кликабельной */
-    .post-example::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1;
-    }
-
-    .post-image {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-bottom: 1px solid #eee;
-    }
-
-    .post-content {
-      padding: 15px;
-      position: relative;
-      z-index: 2; /* Поднимаем контент выше псевдоэлемента */
-      pointer-events: none; /* Чтобы клик проходил сквозь контент к псевдоэлементу */
-    }
-
-    .post-title {
-      font-weight: 600;
-      margin-bottom: 10px;
-      font-size: 16px;
-    }
-
-    .post-text {
-      font-size: 14px;
-      color: #495057;
-      margin-bottom: 10px;
-      line-height: 1.5;
-    }
-
-    .post-date {
-      font-size: 13px;
-      color: #868e96;
-    }
-
-    .see-more {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    .see-more a {
-      color: #4a6bff;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .guide-section {
-  background-color: #f9f9f9;
-  padding: 40px;
-  text-align: center;
-  border-radius: 10px;
-  margin: 30px 0;
-}
-
-.guide-section h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.guide-section p {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.download-btn {
-  background-color: #333;
-  color: #fff;
-  padding: 12px 24px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.download-btn:hover {
-  background-color: #555;
-}
-
-
   </style>
 </head>
 <body>
+
+  <!-- Обновлённая верхняя панель -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <a href="#">О нас</a>
+      <a href="#">Курсы</a>
+    </div>
+    <div class="top-bar-right">
+      <a href="register.html">Регистрация</a>
+      <a href="login.html">Войти</a>
+    </div>
+  </div>
+
   <header>
     <img src="bugpoint_logo.png" alt="bugpoint logo" class="logo" />
     <h1>bugpoint || QA</h1>
@@ -257,42 +217,9 @@
   </div>
 
   <section class="guide-section">
-  <h2>📘 Гайд для начинающих тестировщиков</h2>
-  <p>Бесплатный PDF-файл от bugpoint — всё, что нужно джуну: темы, советы, ошибки, рост.</p>
-  <a href="https://disk.yandex.ru/i/GOcP-hjff29HOA" target="_blank" class="download-btn">📥 Скачать гайд</a>
-  </section>
-
-
-  <section class="content-examples">
-    <h2>Примеры публикаций</h2>
-    <p class="subtitle">Реальные посты из авторского Telegram-канала</p>
-
-    <div class="post-examples">
-      <div class="post-example">
-        <img src="post1.jpg" alt="Пример поста: Почему важно искать и устранять баги вовремя" class="post-image">
-        <div class="post-content">
-          <div class="post-title">Почему важно искать и устранять баги вовремя</div>
-          <div class="post-text">
-            Кажется очевидным: баги надо фиксить. Но на практике это не всегда происходит вовремя. А жаль.
-          </div>
-          <div class="post-date">15 мая 2025</div>
-        </div>
-      </div>
-
-      <div class="post-example">
-        <img src="post2.jpg" alt="Пример поста: Гарнизация в тестировании" class="post-image">
-        <div class="post-content">
-          <div class="post-title">Еженедельная рубрика "Баг недели"</div>
-          <div class="post-text">
-            Один баг тихо ломал аналитику несколько месяцев. И никто не замечал.
-          </div>
-          <div class="post-date">12 мая 2025</div>
-        </div>
-      </div>
-
-    <div class="see-more">
-      <a href="https://t.me/bugpointqa" target="_blank">Смотреть больше примеров в канале →</a>
-    </div>
+    <h2>📘 Гайд для начинающих тестировщиков</h2>
+    <p>Бесплатный PDF-файл от bugpoint — всё, что нужно джуну: темы, советы, ошибки, рост.</p>
+    <a href="https://disk.yandex.ru/i/GOcP-hjff29HOA" target="_blank" class="download-btn">📥 Скачать гайд</a>
   </section>
 
   <footer>
