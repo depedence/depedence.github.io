@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Вход — bugpoint</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="./assets/img/bugpoint_logo.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8f9fa;
+      color: #212529;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 30px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .logo {
+      height: 140px;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .login-section {
+      max-width: 400px;
+      margin: 60px auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+    }
+
+    .login-section h2 {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 500;
+    }
+
+    form input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ced4da;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background-color: #212529;
+      color: white;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #343a40;
+    }
+
+    .register-link {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    .register-link a {
+      color: #4a6bff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #adb5bd;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="./assets/img/bugpoint_logo.png" alt="bugpoint logo" class="logo" />
+    <h1>bugpoint || QA</h1>
+  </header>
+
+  <section class="login-section">
+    <h2>Вход в аккаунт</h2>
+    <form>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Пароль</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit" class="submit-btn">Войти</button>
+    </form>
+    <div class="register-link">
+      Нет аккаунта? <a href="/register.html">Зарегистрироваться</a>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 bugpoint. Все права защищены.
+  </footer>
+
+  <script>
+    const form = document.querySelector('form');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const email = form.email.value.trim();
+      const password = form.password.value;
+
+      if (!email || !password) {
+        alert('Пожалуйста, заполните все поля');
+        return;
+      }
+
+      try {
+        const response = await fetch('http://localhost:5000/api/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email, password })
+        });
+
+        const contentType = response.headers.get('content-type');
+
+        if (response.ok) {
+          if (contentType && contentType.includes('application/json')) {
+            const data = await response.json();
+            alert('Вход выполнен успешно!');
+            // здесь потом можно будет перенаправлять пользователя
+          } else {
+            const text = await response.text();
+            console.warn('Ожидался JSON, но получен:', text);
+            alert('Успешно, но сервер вернул не JSON');
+          }
+        } else {
+          const errorText = await response.text();
+          console.warn('Ошибка от сервера:', errorText);
+          alert('Ошибка авторизации: ' + errorText);
+        }
+
+      } catch (error) {
+        alert('Ошибка при отправке запроса: ' + error.message);
+      }
+    });
+  </script>
+
+</body>
+</html>
