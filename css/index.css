@@ -8,13 +8,16 @@ body {
 }
 
 .top-bar {
-  background: linear-gradient(90deg, #ffffff, #f1f3f5);
-  border-bottom: 1px solid #dee2e6;
-  padding: 15px 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #ffffff, #f8f9fa);
+  padding: 15px 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 1000;
+  flex-wrap: wrap;
 }
 
 .container {
@@ -276,5 +279,97 @@ footer {
 
 .offline-modal-content p {
   font-size: 16px;
+  color: #555;
+}
+
+/* Стили кнопки переключения темы */
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+  padding: 4px;
+}
+
+#theme-toggle img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+#theme-toggle:hover img {
+  transform: scale(1.2);
+}
+
+#theme-toggle:hover {
+  transform: scale(1.2);
+}
+
+/* Темная тема */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e;
+  box-shadow: 0 2px 4px rgba(255,255,255,0.1);
+}
+
+body.dark-mode .top-bar {
+  background: linear-gradient(90deg, #1e1e1e, #2c2c2c);
+  border-bottom: 1px solid #333;
+  color: #e0e0e0;
+}
+
+body.dark-mode .top-bar-left a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .top-bar-right a.register-btn {
+  background-color: #e0e0e0;
+  color: #121212;
+}
+
+body.dark-mode .top-bar-right a.login-btn {
+  border: 1px solid #e0e0e0;
+  color: #e0e0e0;
+}
+
+body.dark-mode .intro p {
+  color: #bbbbbb;
+}
+
+body.dark-mode .feature {
+  background: #1e1e1e;
+  border: 1px solid #333;
+}
+
+body.dark-mode .cta a {
+  background-color: #333;
+}
+
+body.dark-mode .cta a:hover {
+  background-color: #555;
+}
+
+body.dark-mode .guide-section {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .guide-section p {
+  color: #bbbbbb;
+}
+
+body.dark-mode .download-btn {
+  background-color: #333;
+}
+
+body.dark-mode .download-btn:hover {
+  background-color: #555;
+}
+
+body.dark-mode footer {
   color: #555;
 }

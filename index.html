@@ -16,17 +16,19 @@
   </div>
 
   <div class="top-bar">
-    <div class="container">
-      <div class="top-bar-left">
-        <a href="#">О нас</a>
-        <a href="#">Курсы</a>
-      </div>
-      <div class="top-bar-right" id="authButtons">
-        <a href="register.html" class="register-btn">Регистрация</a>
-        <a href="login.html" class="login-btn">Войти</a>
-      </div>
+    <div class="top-bar-left">
+      <a href="#">О нас</a>
+      <a href="#">Курсы</a>
+    </div>
+    <div class="top-bar-right">
+      <button id="theme-toggle" aria-label="Сменить тему">
+        <svg id="theme-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"></svg>
+      </button>
+      <a href="register.html" class="register-btn">Регистрация</a>
+      <a href="login.html" class="login-btn">Войти</a>
     </div>
   </div>
+
 
   <header>
     <img src="./assets/img/bugpoint_logo.png" alt="bugpoint logo" class="logo" />
@@ -74,5 +76,6 @@
 </div>
 
   <script src="./js/index.js"></script>
+  <script src="./js/theme.js"></script>
 </body>
 </html>
