@@ -22,3 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     location.reload();
   });
 });
+
+window.addEventListener("load", () => {
+  document.getElementById("loader").style.display = "none";
+});
