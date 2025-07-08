@@ -1,0 +1,1445 @@
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Строим QA by Shoo v2.0 и меньше страдаем</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Caveat:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Dark Theme & Page Specific Styles -->
+    <link rel="stylesheet" href="dark-theme.css" />
+    <link rel="stylesheet" href="lending.css" />
+  </head>
+  <body style="">
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="container">
+        <div class="nav-content">
+          <a href="/" class="nav-title">
+            Строим QA v2.0<span class="nav-signature">by Shoo</span>
+          </a>
+          <div class="nav-links">
+            <a href="/about">Обо мне</a>
+            <a href="#course-topics">О курсе</a>
+            <a href="#pricing">Цены</a>
+            <a href="/login/">Войти</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container-tight">
+        <div class="hero-content">
+          <!-- Main Headline -->
+          <h1 class="hero-title">
+            Строим QA v2.0 <span class="hero-signature">by Shoo</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Курс о том, как выстраивать QA, чтобы они помогали тебе, команде и
+            бизнесу
+          </p>
+
+          <!-- Personal Introduction with Photo -->
+          <div class="hero-intro">
+            <div class="author-intro">
+              <img
+                src="/static/images/icon.jpeg"
+                alt="Shoo"
+                class="author-photo"
+              />
+              <div class="author-text">
+                <p>
+                  Привет, меня зовут Андрей Гасов, но в русскоязычном QA
+                  коммьюнити больше людей знает меня как Shoo.
+                  <a href="/about" class="intro-link">Обо мне →</a> <br />
+                  В этом курсе я рассказываю про то, как строить QA процессы
+                  так, чтобы они решали твои конкретные бизнес-проблемы, а не
+                  создавали новые. <br />Без silver bullets и готовых решений —
+                  только рабочие подходы и методология проектирования.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Primary CTAs -->
+          <div class="hero-cta">
+            <a href="/register/" class="btn btn-primary">Записаться на курс</a>
+            <a href="#course-topics" class="btn btn-secondary"
+              >Подробнее о курсе</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Focus Areas -->
+    <section class="course-focus" id="course-topics">
+      <div class="container">
+        <h2>О чем будем говорить</h2>
+        <p class="focus-intro">
+          <a href="#curriculum" class="intro-link"
+            >Подробная программа курса →</a
+          >
+        </p>
+
+        <div class="focus-grid">
+          <!-- QA Domain Overview -->
+          <div class="focus-card purple">
+            <div class="focus-card-header">
+              <h3>Про QA домен в целом</h3>
+              <span class="micro-accent micro-accent-purple"></span>
+            </div>
+            <p>
+              Что вообще значит "качество" и какими бывают QA процессы? Как
+              понять, что делать, когда стоит задача построить QA процессы с
+              нуля.
+            </p>
+
+            <div class="focus-examples">
+              <h4>Разбираем</h4>
+              <ul>
+                <li>Само понятие качества и в чем его оценивать</li>
+                <li>Что из себя представляет QA домен</li>
+                <li>Основные блоки работ и их взаимосвязи</li>
+                <li>Какие запросы бизнеса мы можем решать</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- QA Strategy & Vision -->
+          <div class="focus-card cyan">
+            <div class="focus-card-header">
+              <h3>Про стратегию и видение QA</h3>
+              <span class="micro-accent micro-accent-cyan"></span>
+            </div>
+            <p>
+              Какие есть типовые подходы и архитектуры QA домена. Почему
+              единственного правильного подхода не существует и как превратить
+              хотелки бизнеса в стратегическое видение.
+            </p>
+
+            <div class="focus-examples">
+              <h4>Разбираем</h4>
+              <ul>
+                <li>Почему QA можно строить очень по-разному</li>
+                <li>Типовые подходы и их отличия</li>
+                <li>На что обращать внимание при выстраивании стратегии</li>
+                <li>Как формировать видение QA домена</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Process Design -->
+          <div class="focus-card green">
+            <div class="focus-card-header">
+              <h3>Дизайн процессов</h3>
+              <span class="micro-accent micro-accent-green"></span>
+            </div>
+            <p>
+              Какие бывают процессы, чем они отличаются и какие имеют
+              характерные черты. На что важно обращать внимание при выстраивании
+              новых процессов.
+            </p>
+
+            <div class="focus-examples">
+              <h4>Разбираем</h4>
+              <ul>
+                <li>База process design</li>
+                <li>Как выбрать подходящий процесс</li>
+                <li>Как понять, что все работает хорошо</li>
+                <li>Как внедрять процессные практики</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Team & Culture -->
+          <div class="focus-card pink">
+            <div class="focus-card-header">
+              <h3>Команда и культура</h3>
+              <span class="micro-accent micro-accent-pink"></span>
+            </div>
+            <p>
+              Как собирать и развивать классные команды, которые будут
+              эффективно решать задачи QA. Какими бывают QA команды и от чего
+              зависит какая именно команда нужна.
+            </p>
+
+            <div class="focus-examples">
+              <h4>Разбираем</h4>
+              <ul>
+                <li>Дизайн команды под конкретные задачи</li>
+                <li>Лидершип в QA командах</li>
+                <li>Quality Ownership и культура качества</li>
+                <li>Найм, развитие, удержание экспертизы</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Metrics & Visibility -->
+          <div class="focus-card orange">
+            <div class="focus-card-header">
+              <h3>Метрики и видимость</h3>
+              <span class="micro-accent micro-accent-orange"></span>
+            </div>
+            <p>
+              Какими бывают метрики, зачем они нужны и почему это важная часть
+              работы. Как понять какие метрики нужны для твоих задач и как их
+              использовать.
+            </p>
+
+            <div class="focus-examples">
+              <h4>Разбираем</h4>
+              <ul>
+                <li>Проектирование метрик под цели и задачи</li>
+                <li>Системы мониторинга и раннего предупреждения</li>
+                <li>Репортинг для разных аудиторий</li>
+                <li>Принятие решений на основе данных</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Process Evolution -->
+          <div class="focus-card yellow">
+            <div class="focus-card-header">
+              <h3>Как развивать процессы</h3>
+              <span class="micro-accent micro-accent-yellow"></span>
+            </div>
+            <p>
+              Как процессы эволюционируют вместе с командой и меняются вместе с
+              окружающими контекстами. Что делать, когда первоначальный план
+              воплощен и пришло время двигаться дальше.
+            </p>
+
+            <div class="focus-examples">
+              <h4>Разбираем</h4>
+              <ul>
+                <li>Адаптация механизмов под новые реалии</li>
+                <li>Эволюция процессов вместе с командой</li>
+                <li>Разница между тактикой и стратегией</li>
+                <li>Как переходить от быстрых побед к системным изменениям</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Anti-Pattern Section -->
+    <section class="anti-patterns">
+      <div class="container">
+        <h2>Чего не будет на курсе</h2>
+
+        <div class="focus-grid">
+          <!-- Best Practices -->
+          <div class="focus-card anti">
+            <div class="focus-card-header">
+              <h3>Best practices и универсальных решений</h3>
+              <span class="micro-accent micro-accent-pink"></span>
+            </div>
+            <p>
+              Никаких секретов успеха, универсальных решений или "делайте как в
+              Google". Только методология проектирования под твой контекст.
+            </p>
+          </div>
+
+          <!-- Tools Study -->
+          <div class="focus-card anti">
+            <div class="focus-card-header">
+              <h3>Изучения конкретных инструментов</h3>
+              <span class="micro-accent micro-accent-pink"></span>
+            </div>
+            <p>
+              Не обзоры фич и не сравнения Jira с Linear. Изучаем принципы
+              выбора инструментов под конкретные задачи и контекст.
+            </p>
+          </div>
+
+          <!-- Career Hacks -->
+          <div class="focus-card anti">
+            <div class="focus-card-header">
+              <h3>Лайфхаков для получения оффера</h3>
+              <span class="micro-accent micro-accent-pink"></span>
+            </div>
+            <p>
+              Без советов как составить правильное резюме и начать зарабатывать
+              больше денег. Только про решение рабочих задач и помощь команде в
+              создании крутых продуктов с меньшим количеством боли.
+            </p>
+          </div>
+        </div>
+
+        <div class="author-comment">
+          <p>
+            Вместо готовых решений — методология проектирования под твой
+            конкретный контекст
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Participant Profiles Section -->
+    <section class="participant-profiles">
+      <div class="container">
+        <h2>Кому будет полезен этот курс</h2>
+
+        <div class="profiles-grid">
+          <!-- QA Engineers wanting deeper understanding -->
+          <div class="profile-item">
+            <div class="profile-bullet purple"></div>
+            <div class="profile-content">
+              <h3>
+                Тех, кто работает в QA и хочет глубже понимать логику процессов
+              </h3>
+              <p>
+                Не только выполнять задачи, но и понимать системную логику за
+                привычными практиками и инструментами.
+              </p>
+            </div>
+          </div>
+
+          <!-- Process builders -->
+          <div class="profile-item">
+            <div class="profile-bullet cyan"></div>
+            <div class="profile-content">
+              <h3>Тех, кому предстоит строить QA процессы</h3>
+              <p>
+                С нуля или перестраивать существующие под новые задачи команды и
+                бизнеса, но нужна методология, а не готовые решения.
+              </p>
+            </div>
+          </div>
+
+          <!-- Experienced QA leaders -->
+          <div class="profile-item">
+            <div class="profile-bullet green"></div>
+            <div class="profile-content">
+              <h3>
+                Тех, кто имеет опыт организации QA процессов, но хочет
+                посмотреть на это под новым углом
+              </h3>
+              <p>
+                Систематизировать накопленные знания и получить методологию
+                проектирования вместо интуитивных решений.
+              </p>
+            </div>
+          </div>
+
+          <!-- Tech leaders with quality responsibility -->
+          <div class="profile-item">
+            <div class="profile-bullet pink"></div>
+            <div class="profile-content">
+              <h3>Тех, чья работа связана с формированием качества</h3>
+              <p>
+                Техлиды, руководители разработки, продуктовые менеджеры — всех,
+                кто хочет понимать, как системно работать с качеством.
+              </p>
+            </div>
+          </div>
+
+          <!-- Everyone else interested -->
+          <div class="profile-item">
+            <div class="profile-bullet orange"></div>
+            <div class="profile-content">
+              <h3>
+                Тех, кто интересуется тем, как QA может решать реальные
+                бизнес-задачи
+              </h3>
+              <p>
+                А не создавать дополнительную бюрократию, и хочет разобраться в
+                методологии проектирования процессов под конкретный контекст.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Author Comment - Standalone -->
+    <section class="py-4">
+      <div class="container">
+        <div class="author-comment">
+          <p>
+            Если ты узнал себя в одном из описаний — курс поможет разобраться с
+            тем, как создавать процессы под твой конкретный контекст, а не
+            просто копировать готовые решения.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+      <div class="container">
+        <h2>Форматы участия</h2>
+
+        <div class="pricing-grid">
+          <!-- Self-Study Plan -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>Я сам</h3>
+              <div class="price">20 000 ₽</div>
+            </div>
+
+            <div class="pricing-features">
+              <div class="feature-item">
+                <span class="feature-check">✓</span>
+                Доступ ко всему контенту курса
+              </div>
+              <div class="feature-item">
+                <span class="feature-check">✓</span>
+                Бессрочный доступ к материалам
+              </div>
+            </div>
+
+            <div class="pricing-cta">
+              <a href="/register/" class="btn-pricing">Выбрать этот формат</a>
+            </div>
+          </div>
+
+          <!-- Stream Plan -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>В потоке</h3>
+              <div class="price">55 000 ₽</div>
+            </div>
+
+            <div class="pricing-features">
+              <div class="feature-item">
+                <span class="feature-check">✓</span>
+                Всё из "Я сам"
+              </div>
+              <div class="feature-item">
+                <span class="feature-check">✓</span>
+                Асинхронный фидбэк по домашкам
+              </div>
+              <div class="feature-item">
+                <span class="feature-check">✓</span>
+                Чат потока и Q&amp;A сессии
+              </div>
+            </div>
+
+            <div class="pricing-cta">
+              <a href="/register/" class="btn-pricing">Выбрать этот формат</a>
+            </div>
+          </div>
+
+          <!-- Premium Plan -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3>This is fine</h3>
+              <div class="price">80 000 ₽</div>
+            </div>
+
+            <div class="pricing-features">
+              <div class="feature-item">
+                <span class="feature-check">✓</span>
+                Всё из "В потоке"
+              </div>
+              <div class="feature-item">
+                <span class="feature-check">✓</span>
+                Регулярные созвоны с разбором домашек
+              </div>
+              <div class="feature-item">
+                <span class="feature-check">✓</span>
+                4 часа персональных консультаций
+              </div>
+            </div>
+
+            <div class="pricing-cta">
+              <a href="/register/" class="btn-pricing">Выбрать этот формат</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="pricing-note">
+          <p>
+            После регистрации я свяжусь с тобой для подтверждения участия и
+            обсуждения всех деталей
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Schedule & Workflow Section -->
+    <section class="workflow-section">
+      <div class="container">
+        <h2>Как проходит обучение</h2>
+        <p class="workflow-subtitle">
+          Выбери формат участия, чтобы увидеть путь обучения
+        </p>
+
+        <!-- Format Selector -->
+        <div class="format-selector">
+          <div class="format-tab active" onclick="showWorkflow('self')">
+            Я сам
+          </div>
+          <div class="format-tab" onclick="showWorkflow('stream')">
+            В потоке
+          </div>
+          <div class="format-tab" onclick="showWorkflow('premium')">
+            This is fine
+          </div>
+        </div>
+
+        <!-- Timeline Container -->
+        <div class="timeline-container">
+          <!-- Self-Study Timeline -->
+          <div class="timeline-content active" id="workflow-self">
+            <div class="timeline-item">
+              <div class="timeline-step">
+                <div class="timeline-step-title">Старт</div>
+                <div class="timeline-step-duration">20 июня</div>
+              </div>
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-description">
+                <h4>Доступ к курсу открыт</h4>
+                <p>
+                  Получаешь доступ к платформе курса и всем материалам первого
+                  модуля.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-step">
+                <div class="timeline-step-title">Новый контент</div>
+                <div class="timeline-step-duration">~ раз в 2 недели</div>
+              </div>
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-description">
+                <h4>Публикуется контент новых модулей</h4>
+                <p>Доступ к контенту открывается вместе с движением Потока.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-step">
+                <div class="timeline-step-title">Обучение</div>
+                <div class="timeline-step-duration">Когда тебе удобно</div>
+              </div>
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-description">
+                <h4>Самостоятельно обучение</h4>
+                <p>
+                  Изучай контент в режиме самообучения в любое время. <br />
+                  Применяй полученные знания в своих проектах.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-step">
+                <div class="timeline-step-title">Доступ</div>
+                <div class="timeline-step-duration">Навсегда</div>
+              </div>
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="timeline-description">
+                <h4>Бессрочный доступ</h4>
+                <p>
+                  Все материалы курса остаются доступны навсегда. <br />
+                  Так ты всегда сможешь к ним вернуться.
+                </p>
+              </div>
+            </div>
+
+            <div class="module-info">
+              <h4>🚀 Идеально для тех, кто</h4>
+              <p>
+                Предпочитает самостоятельное обучение, имеет опыт в QA и хочет
+                скорее расширить кругозор, чем проактивно учиться.
+              </p>
+            </div>
+          </div>
+
+          <!-- Stream Timeline -->
+          <div class="timeline-content" id="workflow-stream">
+            <div class="timeline-item">
+              <div class="timeline-step">
+                <div class="timeline-step-title">Старт</div>
+                <div class="timeline-step-duration">20 июня</div>
+              </div>
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-description">
+                <h4>Доступ к курсу</h4>
+                <p>
+                  Получаешь доступ к платформе, материалам и персональному
+                  пространству для домашних заданий.
+                </p>
+                <p>Я присылаю тебе инвайт в телеграм-чат "Потока".</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-step">
+                <div class="timeline-step-title">Тайминги</div>
+                <div class="timeline-step-duration">Как тебе удобно</div>
+              </div>
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-description">
+                <h4>Определи свои дедлайны</h4>
+                <p>
+                  Ты знакомишься с материалами первого блока, оцениваешь
+                  масштабы и определяешь нужный тебе темп. <br />
+                  Проговариваем личные цели и тайминги по прохождению модулей.
+                  <br />
+                  Рекомендуемый темп — 1 модуль в 1-2 недели.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-step">
+                <div class="timeline-step-title">Изучение</div>
+                <div class="timeline-step-duration">~1-2 недели</div>
+              </div>
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-description">
+                <h4>Погружение в модуль</h4>
+                <p>
+                  Изучаешь контент, смотришь примеры и материалы во внешних
+                  источниках.
+                </p>
+                <ul>
+                  <li>Текстовые + видео материалы и кейсы</li>
+                  <li>Ссылки на полезные материалы</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-step">
+                <div class="timeline-step-title">Нетворкинг</div>
+                <div class="timeline-step-duration">По желанию</div>
+              </div>
+              <div class="timeline-marker">
+                <div class="timeline-dot hollow"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-description">
+                <h4>Общаешься с другими участниками</h4>
+                <p>
+                  Холивары, обсуждения и обмен опытом в чате Потока.<br />
+                  Обсуждение вопросов по курсу на Q&amp;A сессиях.<br />
+                  Нетворкинг и полезные знакомства с коллегами по цеху.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-step">
+                <div class="timeline-step-title">Практика</div>
+                <div class="timeline-step-duration">~1 неделя</div>
+              </div>
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-description">
+                <h4>Выполнение домашнего задания</h4>
+                <p>
+                  Применяешь полученные знания на практике. Без пустых тестов и
+                  заучивания терминов, только решение практических задач.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-step">
+                <div class="timeline-step-title">Фидбэк</div>
+                <div class="timeline-step-duration">~1-4 дня</div>
+              </div>
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-description">
+                <h4>Получение обратной связи</h4>
+                <p>
+                  Детальный разбор твоей работы с рекомендациями по улучшению и
+                  ответами на вопросы.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-step">
+                <div class="timeline-step-title">Далее</div>
+                <div class="timeline-step-duration">Повтор</div>
+              </div>
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+              </div>
+              <div class="timeline-description">
+                <h4>Переход к следующему модулю</h4>
+                <p>
+                  После получения фидбэка переходишь к изучению следующего
+                  модуля. Цикл повторяется до конца курса.
+                </p>
+              </div>
+            </div>
+
+            <div class="module-info">
+              <h4>🚀 Идеально для тех, кто</h4>
+              <p>
+                Хочет системно проработать материал с поддержкой преподавателя,
+                получить обратную связь по своим решениям и обменяться опытом с
+                другими участниками
+              </p>
+            </div>
+          </div>
+
+          <!-- Premium Timeline -->
+          <div class="timeline-content" id="workflow-premium">
+            <div class="timeline-item">
+              <div class="timeline-step">
+                <div class="timeline-step-title">Старт</div>
+                <div class="timeline-step-duration">20 июня</div>
+              </div>
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-description">
+                <h4>Доступ к курсу</h4>
+                <p>
+                  Получаешь доступ к платформе, материалам и персональному
+                  пространству для домашних заданий.
+                </p>
+                <p>Я присылаю тебе инвайт в телеграм-чат "Потока".</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-step">
+                <div class="timeline-step-title">Тайминги</div>
+                <div class="timeline-step-duration">Как тебе удобно</div>
+              </div>
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-description">
+                <h4>Определи свои дедлайны</h4>
+                <p>
+                  Ты знакомишься с материалами первого блока, оцениваешь
+                  масштабы и определяешь нужный тебе темп. <br />
+                  Проговариваем личные цели и тайминги по прохождению модулей.
+                  <br />
+                  Рекомендуемый темп — 1 модуль в 1-2 недели.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-step">
+                <div class="timeline-step-title">Изучение</div>
+                <div class="timeline-step-duration">~1-2 недели</div>
+              </div>
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-description">
+                <h4>Погружение в модуль</h4>
+                <p>
+                  Изучаешь контент, смотришь примеры и материалы во внешних
+                  источниках.
+                </p>
+                <ul>
+                  <li>Текстовые + видео материалы и кейсы</li>
+                  <li>Ссылки на полезные материалы</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-step">
+                <div class="timeline-step-title">Нетворкинг</div>
+                <div class="timeline-step-duration">По желанию</div>
+              </div>
+              <div class="timeline-marker">
+                <div class="timeline-dot hollow"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-description">
+                <h4>Общаешься с другими участниками</h4>
+                <p>
+                  Холивары, обсуждения и обмен опытом в чате Потока.<br />
+                  Обсуждение вопросов по курсу на Q&amp;A сессиях.<br />
+                  Нетворкинг и полезные знакомства с коллегами по цеху.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-step">
+                <div class="timeline-step-title">Практика</div>
+                <div class="timeline-step-duration">~1 неделя</div>
+              </div>
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-description">
+                <h4>Выполнение домашнего задания</h4>
+                <p>
+                  Применяешь полученные знания на практике. Без пустых тестов и
+                  заучивания терминов, только решение практических задач.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-step">
+                <div class="timeline-step-title">Фидбэк</div>
+                <div class="timeline-step-duration">~1-4 дня</div>
+              </div>
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-description">
+                <h4>Получение обратной связи</h4>
+                <p>
+                  Детальный разбор твоей работы с рекомендациями по улучшению и
+                  ответами на вопросы.
+                </p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-step">
+                <div class="timeline-step-title">Разбор</div>
+                <div class="timeline-step-duration">30-60 мин</div>
+              </div>
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-description">
+                <h4>Персональный созвон</h4>
+                <p>
+                  Разбираем обратную связь по домашке формате 1-на-1.
+                  Проговариваем сложные моменты и все вопросы.
+                </p>
+                <ul>
+                  <li>Разбор домашнего задания</li>
+                  <li>Консультация по твоим кейсам</li>
+                  <li>Рекомендации по внедрению</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-step">
+                <div class="timeline-step-title">Далее</div>
+                <div class="timeline-step-duration">Повтор</div>
+              </div>
+              <div class="timeline-marker">
+                <div class="timeline-dot"></div>
+                <div class="timeline-line"></div>
+              </div>
+              <div class="timeline-description">
+                <h4>Переход к следующему модулю</h4>
+                <p>
+                  После получения фидбэка переходишь к изучению следующего
+                  модуля. Цикл повторяется до конца курса.
+                </p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-step">
+                <div class="timeline-step-title">Консультации</div>
+                <div class="timeline-step-duration">В любое время</div>
+              </div>
+              <div class="timeline-marker">
+                <div class="timeline-dot hollow"></div>
+              </div>
+              <div class="timeline-description">
+                <h4>4 часа персональных консультаций</h4>
+                <p>
+                  Дополнительный разбор и обсуждение актуальных для тебя тем и
+                  кейсов.<br />
+                  Во время прохождения курса или после его завершения.
+                </p>
+              </div>
+            </div>
+
+            <div class="module-info">
+              <h4>🚀 Идеально для тех, кто</h4>
+              <p>
+                Решает конкретные задачи прямо сейчас, нуждается в персональной
+                поддержке и хочет максимально адаптировать курс под свой
+                контекст
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Course Curriculum Section -->
+    <section class="course-curriculum" id="curriculum">
+      <div class="container">
+        <h2>Структура курса</h2>
+        <p class="curriculum-intro">
+          Шаг за шагом от анализа контекста до масштабирования процессов
+        </p>
+
+        <!-- Learning Journey Roadmap -->
+        <div class="learning-roadmap">
+          <!-- Step 1: QA Domain & Approaches -->
+          <div class="step-section step-1">
+            <div class="step-info">
+              <div class="step-number">1</div>
+              <div class="step-title">QA домен</div>
+            </div>
+
+            <div class="step-connector">
+              <div class="connector-line"></div>
+              <div class="connector-circle"></div>
+            </div>
+
+            <div class="modules-content">
+              <div class="module-pair">
+                <div class="module-block">
+                  <div class="module-header">
+                    <span class="module-number">01</span>
+                    <h5 class="module-title">Про QA домен в целом</h5>
+                  </div>
+                  <p class="module-description">
+                    Что такое качество, из чего состоит QA домен и какую
+                    бизнес-ценность приносят QA инженеры и лиды
+                  </p>
+                  <ul class="module-topics">
+                    <li>Какой импакт может приносить работа над качеством</li>
+                    <li>Ключевые цели, задачи и бизнес-ценность</li>
+                    <li>
+                      Основные области интереса и пласты работы в QA домене
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="module-block">
+                  <div class="module-header">
+                    <span class="module-number">02</span>
+                    <h5 class="module-title">
+                      Подходы к QA процессам и командам
+                    </h5>
+                  </div>
+                  <p class="module-description">
+                    Типовые подходы к организации процессов и команд, их отличия
+                    и выбор подходящего
+                  </p>
+                  <ul class="module-topics">
+                    <li>Понимание различных подходов и их отличий</li>
+                    <li>Как выбрать подходящий для вашего контекста подход</li>
+                    <li>Зависимости и факторы принятия решений</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Analysis & Strategy -->
+          <div class="step-section step-2">
+            <div class="step-info">
+              <div class="step-number">2</div>
+              <div class="step-title">Общее видение</div>
+            </div>
+
+            <div class="step-connector">
+              <div class="connector-line"></div>
+              <div class="connector-circle"></div>
+            </div>
+
+            <div class="modules-content">
+              <div class="module-pair">
+                <div class="module-block">
+                  <div class="module-header">
+                    <span class="module-number">03</span>
+                    <h5 class="module-title">
+                      Сбор требований и анализ текущего состояния
+                    </h5>
+                  </div>
+                  <p class="module-description">
+                    Работа с бизнесом, анализ существующих процессов и выявление
+                    возможностей для улучшения
+                  </p>
+                  <ul class="module-topics">
+                    <li>Сбор фидбэка и ожиданий от бизнеса</li>
+                    <li>Работа с неявными или невыполнимыми требованиями</li>
+                    <li>Анализ существующих процессов команды и компании</li>
+                  </ul>
+                </div>
+
+                <div class="module-block">
+                  <div class="module-header">
+                    <span class="module-number">04</span>
+                    <h5 class="module-title">
+                      Формирование стратегии и оценка ресурсов
+                    </h5>
+                  </div>
+                  <p class="module-description">
+                    Создание глобального видения, работа с ограничениями и
+                    определение ключевых принципов
+                  </p>
+                  <ul class="module-topics">
+                    <li>Изучение доступных ограничений и ресурсов</li>
+                    <li>Формирование высокоуровневой стратегии</li>
+                    <li>
+                      Создание глобального видения на основе собранных данных
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Vision to Process -->
+          <div class="step-section step-3">
+            <div class="step-info">
+              <div class="step-number">3</div>
+              <div class="step-title">Способы реализации</div>
+            </div>
+
+            <div class="step-connector">
+              <div class="connector-line"></div>
+              <div class="connector-circle"></div>
+            </div>
+
+            <div class="modules-content">
+              <div class="module-pair">
+                <div class="module-block">
+                  <div class="module-header">
+                    <span class="module-number">05</span>
+                    <h5 class="module-title">
+                      От видения к конкретным инициативам
+                    </h5>
+                  </div>
+                  <p class="module-description">
+                    Превращение глобального видения в роадмап, декомпозиция на
+                    инициативы и приоритизация
+                  </p>
+                  <ul class="module-topics">
+                    <li>Создание роадмапа из абстрактного видения</li>
+                    <li>Декомпозиция скоупа на конкретные инициативы</li>
+                    <li>Определение критериев успеха и метрик отслеживания</li>
+                  </ul>
+                </div>
+
+                <div class="module-block">
+                  <div class="module-header">
+                    <span class="module-number">06</span>
+                    <h5 class="module-title">Основы дизайна процессов</h5>
+                  </div>
+                  <p class="module-description">
+                    Базы процессного дизайна, как выбрать подходящий процесс и
+                    интегрировать с окружением
+                  </p>
+                  <ul class="module-topics">
+                    <li>Типы, характеристики, механизмы процессов</li>
+                    <li>Сравнение и оценка различных решений</li>
+                    <li>Взаимодействие процессов и интеграция с окружением</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 4: Tools & Solutions -->
+          <div class="step-section step-4">
+            <div class="step-info">
+              <div class="step-number">4</div>
+              <div class="step-title">Выбор инструментов</div>
+            </div>
+
+            <div class="step-connector">
+              <div class="connector-line"></div>
+              <div class="connector-circle"></div>
+            </div>
+
+            <div class="modules-content">
+              <div class="module-pair">
+                <div class="module-block">
+                  <div class="module-header">
+                    <span class="module-number">07</span>
+                    <h5 class="module-title">
+                      Выбор инструментов и технологий
+                    </h5>
+                  </div>
+                  <p class="module-description">
+                    Понимание когда создавать vs. покупать инструменты и баланс
+                    между качеством и скоростью
+                  </p>
+                  <ul class="module-topics">
+                    <li>Ключевые критерии принятия решений</li>
+                    <li>Продажа технических решений бизнесу и команде</li>
+                    <li>
+                      Баланс между инженерным перфекционизмом и быстрыми
+                      решениями
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="module-block">
+                  <div class="module-header">
+                    <span class="module-number">08</span>
+                    <h5 class="module-title">Соответствие проблем и решений</h5>
+                  </div>
+                  <p class="module-description">
+                    Когда решать проблемы процессами, инструментами или
+                    контролируемым хаосом
+                  </p>
+                  <ul class="module-topics">
+                    <li>Плюсы и минусы каждого подхода</li>
+                    <li>Фреймворк принятия решений для выбора решения</li>
+                    <li>Практические примеры применения подходов</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 5: Metrics & Teams -->
+          <div class="step-section step-5">
+            <div class="step-info">
+              <div class="step-number">5</div>
+              <div class="step-title">Метрики и Команды</div>
+            </div>
+
+            <div class="step-connector">
+              <div class="connector-line"></div>
+              <div class="connector-circle"></div>
+            </div>
+
+            <div class="modules-content">
+              <div class="module-pair">
+                <div class="module-block">
+                  <div class="module-header">
+                    <span class="module-number">09</span>
+                    <h5 class="module-title">Метрики и измерения</h5>
+                  </div>
+                  <p class="module-description">
+                    Что такое метрики, как выбирать подходящие и эффективно
+                    работать с данными
+                  </p>
+                  <ul class="module-topics">
+                    <li>Зачем нужны метрики и как их выбирать</li>
+                    <li>Коммуникация и репортинг метрик</li>
+                    <li>Типы метрик: процессы, команда, качество продукта</li>
+                  </ul>
+                </div>
+
+                <div class="module-block">
+                  <div class="module-header">
+                    <span class="module-number">10</span>
+                    <h5 class="module-title">Создание команды и управление</h5>
+                  </div>
+                  <p class="module-description">
+                    Как собирать команды, развивать людей и управлять всеми
+                    аспектами работы с людьми
+                  </p>
+                  <ul class="module-topics">
+                    <li>
+                      Дизайн команды и создание отличных инженерных команд
+                    </li>
+                    <li>Модели управления и развития</li>
+                    <li>Найм, увольнение, конфликты и управление выгоранием</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 6: Leadership & Influence -->
+          <div class="step-section step-6">
+            <div class="step-info">
+              <div class="step-number">6</div>
+              <div class="step-title">Влияние и Внедрение Изменений</div>
+            </div>
+
+            <div class="step-connector">
+              <div class="connector-line"></div>
+              <div class="connector-circle"></div>
+            </div>
+
+            <div class="modules-content">
+              <div class="module-pair">
+                <div class="module-block">
+                  <div class="module-header">
+                    <span class="module-number">11</span>
+                    <h5 class="module-title">Лидершип в QA домене</h5>
+                  </div>
+                  <p class="module-description">
+                    Различные типы лидерства и работа с ожиданиями от QA
+                    лидерства
+                  </p>
+                  <ul class="module-topics">
+                    <li>Процессное vs. технологическое лидерство</li>
+                    <li>QA лид как лидер экспертизы vs. другие функции</li>
+                    <li>Ожидания от QA лида со стороны стейкхолдеров</li>
+                  </ul>
+                </div>
+
+                <div class="module-block">
+                  <div class="module-header">
+                    <span class="module-number">12</span>
+                    <h5 class="module-title">Продажа и защита идей</h5>
+                  </div>
+                  <p class="module-description">
+                    Как получать поддержку бизнеса, преодолевать сопротивление и
+                    внедрять изменения
+                  </p>
+                  <ul class="module-topics">
+                    <li>Получение поддержки бизнеса для ресурсов</li>
+                    <li>Преодоление сопротивления и инертности</li>
+                    <li>Инструменты для более легкого внедрения</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 7: Results & Communication -->
+          <div class="step-section step-7">
+            <div class="step-info">
+              <div class="step-number">7</div>
+              <div class="step-title">Результаты и Коммуникации</div>
+            </div>
+
+            <div class="step-connector">
+              <div class="connector-line"></div>
+              <div class="connector-circle"></div>
+            </div>
+
+            <div class="modules-content">
+              <div class="module-pair">
+                <div class="module-block">
+                  <div class="module-header">
+                    <span class="module-number">13</span>
+                    <h5 class="module-title">Анализ и оценка результатов</h5>
+                  </div>
+                  <p class="module-description">
+                    Как понять, что все идет хорошо, и что делать с
+                    провалившимися экспериментами
+                  </p>
+                  <ul class="module-topics">
+                    <li>Что делать, когда задачи завершены</li>
+                    <li>
+                      Работа с провалившимися экспериментами и инициативами
+                    </li>
+                    <li>Подходы к непрерывному улучшению</li>
+                  </ul>
+                </div>
+
+                <div class="module-block">
+                  <div class="module-header">
+                    <span class="module-number">14</span>
+                    <h5 class="module-title">Репортинг и коммуникация</h5>
+                  </div>
+                  <p class="module-description">
+                    Типы отчетов, важность дашбордов и репортинг для разных
+                    аудиторий
+                  </p>
+                  <ul class="module-topics">
+                    <li>Типы отчетов и их назначение</li>
+                    <li>Почему графики, дашборды и отчеты важны</li>
+                    <li>Почему просто тест-репортов недостаточно</li>
+                    <li>
+                      Репортинг результатов тестирования и состояния качества
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 8: Visibility & Scaling -->
+          <div class="step-section step-8">
+            <div class="step-info">
+              <div class="step-number">8</div>
+              <div class="step-title">Видимость и Масштабирование</div>
+            </div>
+
+            <div class="step-connector">
+              <div class="connector-line"></div>
+              <div class="connector-circle"></div>
+            </div>
+
+            <div class="modules-content">
+              <div class="module-pair">
+                <div class="module-block">
+                  <div class="module-header">
+                    <span class="module-number">15</span>
+                    <h5 class="module-title">Видимость и владение качеством</h5>
+                  </div>
+                  <p class="module-description">
+                    Делаем работу QA видимой и превращаем качество в
+                    ответственность каждого
+                  </p>
+                  <ul class="module-topics">
+                    <li>Почему важно рассказывать об успехах и провалах</li>
+                    <li>
+                      Как делать работу над качеством прозрачной и значимой
+                    </li>
+                    <li>Делаем качество ответственностью каждого</li>
+                  </ul>
+                </div>
+
+                <div class="module-block">
+                  <div class="module-header">
+                    <span class="module-number">16</span>
+                    <h5 class="module-title">Масштабирование и эволюция</h5>
+                  </div>
+                  <p class="module-description">
+                    Адаптация процессов к изменениям, масштабирование и переход
+                    к стратегическому подходу
+                  </p>
+                  <ul class="module-topics">
+                    <li>
+                      Итеративная разработка и поддержка работы над качеством
+                    </li>
+                    <li>Когда масштабировать vs. когда декомпозировать</li>
+                    <li>Переход от тактического к стратегическому подходу</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course Summary -->
+        <div class="course-summary">
+          <h2>
+            Осваиваем не готовые рецепты, а подход к созданию решений под задачи
+          </h2>
+          <p>
+            Шаг за шагом разбираемся как выстраивать процессы, которые будут
+            помогать. <br />
+            Без универсальных best practices — только проектирование под
+            конкретный контекст.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-main">
+            <div class="footer-title">
+              Строим QA <span class="nav-signature">by Shoo</span>
+            </div>
+            <p class="footer-description">
+              Разбираемся с тем, как выстраивать работу над качеством, создавать
+              простые и эффективные процессы, собирать и лидить классные
+              команды. <br />
+              И меньше при этом страдать.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <div class="footer-section">
+              <h4>Связаться</h4>
+              <ul>
+                <li><a href="https://t.me/azshoo">Telegram</a></li>
+              </ul>
+            </div>
+
+            <!--                    <div class="footer-section">
+                                        <h4>Документы</h4>
+                                        <ul>
+                                            <li><a href="/privacy/">Политика конфиденциальности</a></li>
+                                            <li><a href="/terms/">Пользовательское соглашение</a></li>
+                                            <li><a href="/offer/">Публичная оферта</a></li>
+                                        </ul>
+                                    </div>-->
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copyright">
+            <p>© 2025 QA by Shoo.</p>
+            <p class="footer-legal">ИП Гасов Андрей Андреевич</p>
+            <p class="footer-local">
+              ИНН 773391243738 ОГРН 320774600428352 <br />
+              Юридический адрес организации: г. Москва, ул. Туристская д.4 к.5
+              кв.86
+            </p>
+          </div>
+          <div class="footer-accent">
+            <span class="micro-accent micro-accent-purple"></span>
+            <span class="micro-accent micro-accent-cyan"></span>
+            <span class="micro-accent micro-accent-green"></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Workflow section tab switching
+      function showWorkflow(format) {
+        // Remove active class from all tabs
+        document.querySelectorAll(".format-tab").forEach((tab) => {
+          tab.classList.remove("active");
+        });
+
+        // Remove active class from all timeline contents
+        document.querySelectorAll(".timeline-content").forEach((content) => {
+          content.classList.remove("active");
+        });
+
+        // Add active class to clicked tab
+        event.target.classList.add("active");
+
+        // Show corresponding timeline
+        document.getElementById("workflow-" + format).classList.add("active");
+      }
+    </script>
+  </body>
+</html>
